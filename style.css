@@ -1,0 +1,8 @@
+html {
+    background-color: white;
+}
+#header a {
+    margin: 20px 10px;
+    display:inline-block; 
+    color: brown;
+}
