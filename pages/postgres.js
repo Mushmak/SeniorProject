@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-export default function puzzle4() {
+export default function postgres() {
     return(
       <div>
 

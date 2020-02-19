@@ -13,26 +13,26 @@ function MyApp({ Component, pageProps }) {
     
 
      
-      <Link href ="/puzzle1"> 
-      <a> puzzle1 </a> 
+      <Link href ="/ftp"> 
+      <a> ftp </a> 
       </Link>
     
 
    
-       <Link href ="/puzzle2"> 
-       <a> puzzle2 </a> 
+       <Link href ="/http"> 
+       <a> http </a> 
        </Link>  
 
 
   
-       <Link href ="/puzzle3"> 
-       <a> puzzle3 </a> 
+       <Link href ="/ssh"> 
+       <a> ssh </a> 
        </Link> 
 
 
  
-      <Link href ="/puzzle4"> 
-      <a> puzzle4 </a> 
+      <Link href ="/postgres"> 
+      <a> postgres </a> 
       </Link> 
       </div>
 

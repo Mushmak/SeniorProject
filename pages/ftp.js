@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 
-export default function puzzle2() {
+export default function ftp() {
     return(
       <div>
 
-            <a> Hello from puzzle2  </a>
+            <a> Hello from puzzle1  </a>
 
       </div>
       
@@ -14,3 +14,5 @@ export default function puzzle2() {
    
 
   }
+  
+  
