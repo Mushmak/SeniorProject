@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 
-export default function puzzle1() {
+export default function http() {
     return(
       <div>
 
-            <a> Hello from puzzle1  </a>
+            <a> Hello from puzzle2  </a>
 
       </div>
       
@@ -14,5 +14,3 @@ export default function puzzle1() {
    
 
   }
-  
-  

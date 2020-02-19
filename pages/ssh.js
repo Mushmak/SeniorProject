@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-export default function puzzle3() {
+export default function ssh() {
     return(
       <div>
 
