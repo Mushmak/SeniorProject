@@ -5,7 +5,7 @@ export default function ftp() {
     return(
       <div>
 
-            <a> Hello from Marconi  </a>
+            <a> Hello from Richard  </a>
 
       </div>
       
