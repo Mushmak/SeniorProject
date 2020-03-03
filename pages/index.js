@@ -1,16 +1,33 @@
 import Link from 'next/link'
 
 import { Button } from '@rmwc/button';
-
+import { ThemeProvider} from '@rmwc/theme'; 
 
 function HomePage() {
     
   return(
     <>
-       <Button raised> hello world </Button>
-        <p> hello from home page </p>
+    <ThemeProvider
+    options={{
+    primary: 'lightpink',
+    secondary: 'lightblue',
+    onPrimary: 'blue',
+    textPrimaryOnBackground: 'black'
+  }}
+     >
+   
+
+
+
+
+
+
+     </ThemeProvider>
+ 
+
+  
       </> 
-    )    
+    )
     
    
 
