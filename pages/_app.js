@@ -5,7 +5,9 @@ import '@material/theme/dist/mdc.theme.css';
 import { ThemeProvider } from '@rmwc/theme';
 import { Button  } from '@rmwc/button';
 import '@material/list/dist/mdc.list.css';
-
+import '@material/card/dist/mdc.card.css';
+import '@material/icon-button/dist/mdc.icon-button.css';
+import '@rmwc/list/collapsible-list.css';
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -24,7 +26,7 @@ function MyApp({ Component, pageProps }) {
       <Button 
         Label = "Home"
         theme="primary"> 
-          <Link href ="/"> 
+          <Link href ="/home"> 
             <a> home </a> 
           </Link> 
       </Button> 
@@ -75,8 +77,7 @@ function MyApp({ Component, pageProps }) {
      
       </div>
 
-
-
+   
               
         
         <div id = "content "> 
