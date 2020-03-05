@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import '../style.css'
 import '@material/button/dist/mdc.button.css';
 import '@material/theme/dist/mdc.theme.css'; 
@@ -8,10 +9,17 @@ import '@material/list/dist/mdc.list.css';
 import '@material/card/dist/mdc.card.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
 import '@rmwc/list/collapsible-list.css';
+import '@rmwc/icon/icon.css';
 
-function MyApp({ Component, pageProps }) {
+import React, { useEffect } from "react"; 
+
+
+
+function MyApp({ Component, pageProps}) {
+
+
     return (
-    
+      
       <>
       <ThemeProvider 
       options={{
@@ -72,15 +80,14 @@ function MyApp({ Component, pageProps }) {
         </Link>  
       </Button> 
 
- 
- 
-     
+   
       </div>
 
    
               
         
         <div id = "content "> 
+  
 
         <Component {...pageProps}></Component>
 
@@ -89,12 +96,8 @@ function MyApp({ Component, pageProps }) {
         </ThemeProvider>
     </>
     
-
-
-    );
     
     
-    
-  }
+    )}
   
   export default MyApp

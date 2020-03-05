@@ -1,9 +1,16 @@
 import Link from 'next/link'
 import {Card, CardPrimaryAction} from '@rmwc/card';
 import {Typography} from '@rmwc/typography';
-import {List, CollapsibleList,SimpleListItem} from '@rmwc/list'; 
+import {List, CollapsibleList,SimpleListItem} from '@rmwc/list';  
+import {Icon, metaIcon } from '@rmwc/icon'; 
+
+
 
 export default function ftp() {
+
+
+
+  
     return(
       <>
     <Card> 
@@ -29,7 +36,7 @@ export default function ftp() {
       <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 1: Attempt to connect to the FTP server."
       />
     }
@@ -43,7 +50,7 @@ export default function ftp() {
      <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 2: If you are asked for a username, try any username. If you are asked for a password, try any password."
       />
     }
@@ -66,7 +73,7 @@ export default function ftp() {
     <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 4: Try to connect to the FTP again"
       />
     }
@@ -83,7 +90,7 @@ export default function ftp() {
     <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 5: This time use ''anonymous'' or ''ftp'' as username, and leave the password empty"
       />
     }
@@ -97,7 +104,7 @@ export default function ftp() {
      <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 6: Look at all the files in the server"
       />
     }
@@ -112,7 +119,7 @@ export default function ftp() {
      <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 7: Once you have the files listed, look for an suspicious files. Attempt to get the file from the server"
       />
     }
@@ -127,7 +134,7 @@ export default function ftp() {
      <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon={{ icon: 'https://i.imgur.com/GeMFPpz.png?1', strategy: 'url' }}
         text="Step 8: Once you have gotten the file, use the ''exit'' command and view the file on your local computer"
       />
     }
