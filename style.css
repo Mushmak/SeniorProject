@@ -1,11 +1,11 @@
 html {
-    background-color:lightblue;
+    background-color: burlywood;
 }
 #header  {
 
     display:inline-block; 
     color: brown;
-    background-color: lightpink;
+    background-color: lightgreen;
 
 }
 #button {
@@ -13,8 +13,21 @@ html {
     padding-left: 10%;
 
 }
-h1{
+#welcome{
     font-size: large;
-    color: red;
+    color: black;
     text-anchor: middle;
+}
+
+.card-group{
+display: flex;
+flex-direction: row;
+margin-left: 5%;
+}
+
+.devInfo2{
+    
+}
+#header2{
+    font-size: large;
 }

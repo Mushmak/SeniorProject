@@ -7,7 +7,7 @@ export default function basicCommands() {
 <> 
 <List twoLines>
 
-<h1> The spaces between are important, if there is a space, the command in linux will have a space, for example:cd directory would be written as " cd newfolder " </h1> 
+<h1 id ="header2"> The spaces between are important, if there is a space, the command in linux will have a space, for example:cd directory would be written as " cd newfolder " </h1> 
 
 <SimpleListItem
     text= "ls : List all files in current directory, you can add -l places the files in list format, -a lists all files including hidden ones."

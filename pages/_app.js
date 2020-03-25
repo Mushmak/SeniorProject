@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import '../style.css'
+
 import '@material/button/dist/mdc.button.css';
 import '@material/theme/dist/mdc.theme.css'; 
 import { ThemeProvider } from '@rmwc/theme';
@@ -10,6 +10,7 @@ import '@material/card/dist/mdc.card.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
 import '@rmwc/list/collapsible-list.css';
 import '@rmwc/icon/icon.css';
+import '../style.css'
 
 import React, { useEffect } from "react"; 
 
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps}) {
     return (
       
       <>
-      <ThemeProvider 
+      <ThemeProvider
       options={{
         primary: 'lightpink',
         secondary: 'lightblue',
