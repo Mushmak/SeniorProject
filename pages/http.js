@@ -44,7 +44,7 @@ export default function http() {
       <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon='/images/chevron_right.png '
         text="Step 1: Run the following command: dirb http://<webserver>."
       
       />
@@ -60,7 +60,7 @@ export default function http() {
   <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon='/images/chevron_right.png '
         text="Step 2: Look for any suspicious directories in the dirb results, in our example you should see a /backup folder."
       />
     }
@@ -84,7 +84,7 @@ export default function http() {
     <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon='/images/chevron_right.png '
         text="Step 4: Extract the backup.zip file from the webserver."
       />
     }
@@ -100,7 +100,7 @@ export default function http() {
     <CollapsibleList
       handle={
         <SimpleListItem
-        metaIcon=">>"
+        metaIcon='/images/chevron_right.png '
         text="Step 5: View the source code you have extracted, this can be done using the basic cat command located in the help section."
       />
     }
