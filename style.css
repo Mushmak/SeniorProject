@@ -1,8 +1,33 @@
 html {
-    background-color: white;
+    background-color: burlywood;
 }
-#header a {
-    margin: 20px 10px;
+#header  {
+
     display:inline-block; 
     color: brown;
+    background-color: lightgreen;
+
+}
+#button {
+    padding-right: 10%;
+    padding-left: 10%;
+
+}
+#welcome{
+    font-size: large;
+    color: black;
+    text-anchor: middle;
+}
+
+.card-group{
+display: flex;
+flex-direction: row;
+margin-left: 5%;
+}
+
+.devInfo2{
+    
+}
+#header2{
+    font-size: large;
 }
