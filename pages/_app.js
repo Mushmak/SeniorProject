@@ -74,12 +74,22 @@ function MyApp({ Component, pageProps}) {
       </Button> 
 
       <Button 
+        Label ="php"
+        theme ="primary">
+          <Link href = "/php"> 
+            <a> PHP </a>
+          </Link>     
+      </Button> 
+
+      <Button 
         Label = "help"
         theme="primary"> 
         <Link href ="/basicCommands"> 
          <a> Basic Commands </a> 
         </Link>  
       </Button> 
+
+ 
 
    
       </div>
