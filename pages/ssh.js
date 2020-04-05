@@ -38,6 +38,9 @@ export default function ssh() {
                     onOpen={() => console.log('open')}
                     onClose={() => console.log('close')}
                 >
+                    <SimpleListItem>
+                        <a href={"/downloads/id_rsa"}>Click here download the required file</a>
+                    </SimpleListItem>
 
                 </CollapsibleList>
 
