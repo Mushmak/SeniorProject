@@ -1,12 +1,17 @@
 html {
     background-color: burlywood;
 }
-#header  {
+.header  {
 
-    display:inline-block; 
+    display:flex; 
+    flex-direction: row;
+ 
     color: brown;
     background-color: lightgreen;
 
+}
+.flags{
+    margin-left: 20%;
 }
 #button {
     padding-right: 10%;
@@ -25,9 +30,7 @@ flex-direction: row;
 margin-left: 5%;
 }
 
-.devInfo2{
-    
-}
+
 #header2{
     font-size: large;
 }

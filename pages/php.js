@@ -3,8 +3,21 @@ import {Card, CardPrimaryAction} from '@rmwc/card';
 import {Typography} from '@rmwc/typography';
 import {List, CollapsibleList,SimpleListItem} from '@rmwc/list';  
 import {Icon, metaIcon } from '@rmwc/icon';
+import {TextField} from '@rmwc/textfield'; 
+import { Button } from '@rmwc/button';
 
 export default function php() {
+function  checkCode(code){
+
+    if(code == "abc"){
+        console.log("good")
+    }
+    else 
+    {
+        alert("Code is incorrect")
+    }
+
+}
 
     return(
         <>
@@ -199,8 +212,17 @@ export default function php() {
           
 
         
-        
+           
+
+          
         </List>
+        <div className="flagCode">
+            <TextField id = "code" label = "Flag Code" style={{ width: '20%' ,background: 'lightblue'}} />
+            <Button label="Submit"  unelevated  style={{background:'White' , color:'black', height: '40px', width: '40px'}} 
+             onClick={() => checkCode(document.getElementById("code").value)} />
+         
+        </div>
+  
 
 
         </>
