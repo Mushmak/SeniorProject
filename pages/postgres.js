@@ -6,11 +6,15 @@ import {Icon, metaIcon } from '@rmwc/icon';
 import {TextField} from '@rmwc/textfield'; 
 import { Button } from '@rmwc/button';
 
+import {useContext} from 'react';  
+import { CheckboxContenxt} from './_app'; 
+
 export default function postgres() {
+  const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
     if(code == "abc"){
-        console.log("good")
+        setcheckbox('postgress')
     }
     else 
     {

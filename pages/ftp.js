@@ -6,13 +6,15 @@ import {Icon, metaIcon } from '@rmwc/icon';
 import {TextField} from '@rmwc/textfield'; 
 import { Button } from '@rmwc/button';
 
-
+import {useContext} from 'react';  
+import { CheckboxContenxt} from './_app'; 
 
 export default function ftp() {
+  const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
     if(code == "abc"){
-        console.log("good")
+        setcheckbox('ftp'); 
     }
     else 
     {
@@ -41,7 +43,7 @@ export default function ftp() {
     </Card>  
     
     <List>
-      <p2> Lets Try and get into an unsecure FTP </p2>
+      <p> Lets Try and get into an unsecure FTP </p>
         
       <CollapsibleList
       handle={
@@ -51,8 +53,6 @@ export default function ftp() {
         text="Step 1: Attempt to connect to the FTP server."
       />
     }
-    onOpen={() => console.log('open')}
-    onClose={() => console.log('close')}
   >
      <SimpleListItem text="This can be done using the linux command ftp -p <ip address> " />
   
