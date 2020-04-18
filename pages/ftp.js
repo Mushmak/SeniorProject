@@ -3,13 +3,25 @@ import {Card, CardPrimaryAction} from '@rmwc/card';
 import {Typography} from '@rmwc/typography';
 import {List, CollapsibleList,SimpleListItem} from '@rmwc/list';  
 import {Icon, metaIcon } from '@rmwc/icon'; 
+import {TextField} from '@rmwc/textfield'; 
+import { Button } from '@rmwc/button';
 
-
+import {useContext} from 'react';  
+import { CheckboxContenxt} from './_app'; 
 
 export default function ftp() {
+  const setcheckbox= useContext(CheckboxContenxt);  
+  function  checkCode(code){
 
+    if(code == "91be5a2819328d0c3884d3788b7b961c"){
+        setcheckbox('ftp'); 
+    }
+    else 
+    {
+        alert("Code is incorrect")
+    }
 
-
+  }
   
     return(
       <>
@@ -31,7 +43,7 @@ export default function ftp() {
     </Card>  
     
     <List>
-      <p2> Lets Try and get into an unsecure FTP </p2>
+      <p> Lets Try and get into an unsecure FTP </p>
         
       <CollapsibleList
       handle={
@@ -41,8 +53,6 @@ export default function ftp() {
         text="Step 1: Attempt to connect to the FTP server."
       />
     }
-    onOpen={() => console.log('open')}
-    onClose={() => console.log('close')}
   >
      <SimpleListItem text="This can be done using the linux command ftp -p <ip address> " />
   
@@ -128,13 +138,18 @@ export default function ftp() {
     }
   >
      <SimpleListItem text=" check the basic commands tab to how to open the file on your computer " />
-
-     <SimpleListItem text=" (the user would enter the code the found here)" />   
     
      </CollapsibleList> 
 
 
     </List>
+
+    <div className="flagCode">
+            <TextField id = "code" label = "Flag Code" style={{ width: '20%' ,background: 'lightblue'}} />
+            <Button label="Submit"  unelevated  style={{background:'White' , color:'black', height: '40px', width: '40px'}} 
+             onClick={() => checkCode(document.getElementById("code").value)} />
+         
+    </div>
 
     
 

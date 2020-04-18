@@ -10,18 +10,61 @@ import '@material/card/dist/mdc.card.css';
 import '@material/icon-button/dist/mdc.icon-button.css';
 import '@rmwc/list/collapsible-list.css';
 import '@rmwc/icon/icon.css';
+import '@material/checkbox/dist/mdc.checkbox.css';
+import '@material/form-field/dist/mdc.form-field.css';
+import '@material/ripple/dist/mdc.ripple.css';
+import {Checkbox} from '@rmwc/checkbox'; 
+import '@material/textfield/dist/mdc.textfield.css';
+import '@material/floating-label/dist/mdc.floating-label.css';
+import '@material/notched-outline/dist/mdc.notched-outline.css';
+import '@material/line-ripple/dist/mdc.line-ripple.css';
+import '@material/ripple/dist/mdc.ripple.css';
+import '@rmwc/icon/icon.css';
 import '../style.css'
 
-import React, { useEffect } from "react"; 
+import React, { useEffect, useState } from "react"; 
+
+export const CheckboxContenxt = React.createContext({})
 
 
+
+
+const defaultcheckboxes = {
+ftp: false,
+http: false,
+ssh: false,
+postgress: false,
+php: false,
+cron: false,
+sudo: false
+
+}
 
 function MyApp({ Component, pageProps}) {
 
+  
 
+  const[checked,setChecked] = useState(defaultcheckboxes); 
+  useEffect(()=> {
+    if(localStorage.getItem('key')){
+      setChecked (JSON.parse(localStorage.getItem('key')))
+    }
+    
+
+  },[])
+  useEffect(()=> {localStorage.setItem('key',JSON.stringify(checked)) },[checked] ) 
+ 
+  const checkAbox  = (name) => {
+    setChecked(current => {
+      const clonesState = {...current }
+      clonesState[name] = true
+      return clonesState
+    })
+  }
     return (
       
       <>
+      <CheckboxContenxt.Provider value = {checkAbox}> 
       <ThemeProvider
       options={{
         primary: 'lightpink',
@@ -30,10 +73,10 @@ function MyApp({ Component, pageProps}) {
         textPrimaryOnBackground: 'black'
       }}
         >        
-      <div id = "header">  
+      <div className = "header">  
 
       <Button 
-        Label = "Home"
+     //   label = "Home"
         theme="primary"> 
           <Link href ="/home"> 
             <a> home </a> 
@@ -41,15 +84,15 @@ function MyApp({ Component, pageProps}) {
       </Button> 
       
       <Button 
-        Label = "ftp"
+      //  Label = "ftp"
         theme="primary"> 
         <Link href ="/ftp"> 
           <a> ftp </a> 
         </Link>
       </Button> 
-      
+
       <Button 
-        Label = "http"
+       // label = "http"
         theme="primary"> 
         <Link href ="/http"> 
           <a> http </a> 
@@ -57,7 +100,7 @@ function MyApp({ Component, pageProps}) {
       </Button> 
       
       <Button 
-        Label = "ssh"
+       // Label = "ssh"
         theme="primary"> 
         <Link href ="/ssh"> 
           <a> ssh </a> 
@@ -66,7 +109,7 @@ function MyApp({ Component, pageProps}) {
     
 
       <Button 
-        Label = "postgres"
+     //   Label = "postgres"
         theme="primary"> 
         <Link href ="/postgres"> 
          <a> postgres </a> 
@@ -74,7 +117,7 @@ function MyApp({ Component, pageProps}) {
       </Button> 
 
       <Button 
-        Label ="php"
+     //   Label ="php"
         theme ="primary">
           <Link href = "/php"> 
             <a> PHP </a>
@@ -82,17 +125,94 @@ function MyApp({ Component, pageProps}) {
       </Button> 
 
       <Button 
-        Label = "help"
+      //  Label = "CRON"
+        theme="primary"> 
+        <Link href ="/cron"> 
+         <a> CRON </a> 
+        </Link>  
+      </Button>
+
+      <Button 
+      //  Label = "SUDO"
+        theme="primary"> 
+        <Link href ="/sudo"> 
+         <a> SUDO </a> 
+        </Link>  
+      </Button>
+
+      <Button 
+     //   Label = "help"
         theme="primary"> 
         <Link href ="/basicCommands"> 
          <a> Basic Commands </a> 
         </Link>  
       </Button> 
 
- 
-
    
+      <div className="flags">
+        <Checkbox
+        label = "FTP"
+        name = 'ftp'
+        checked={checked.ftp}
+       /> 
+
+        <Checkbox
+        label = "HTTP"
+        name = 'htp'
+        checked={checked.http}
+        /> 
+
+        <Checkbox
+        label = "SSH"
+        name = 'ssh'
+        checked={checked.ssh}
+        /> 
+
+        <Checkbox
+        label = "POSTGRESS"
+        name = 'postgress'
+        checked={checked.postgress}
+        /> 
+
+        <Checkbox
+        label = "PHP"
+        name = 'php'
+        checked={checked.php}
+        /> 
+
+        <Checkbox
+        label = "CRON"
+        name = 'cron'
+        checked={checked.cron}
+        /> 
+        
+        <Checkbox
+        label = "SUDO"
+        name = 'sudo'
+        checked={checked.sudo} 
+        />
+       
+
+  
+
       </div>
+      <div className = "clearb">
+        
+      <Button className =" clearbtn"
+         // label = "clear"
+          theme = "primary"
+          onClick = { () => setChecked(defaultcheckboxes)} > 
+          Clear 
+
+        </Button>
+
+      </div>
+
+
+      </div>
+    
+   
+      
 
    
               
@@ -105,6 +225,7 @@ function MyApp({ Component, pageProps}) {
         </div>
 
         </ThemeProvider>
+        </CheckboxContenxt.Provider>
     </>
     
     
