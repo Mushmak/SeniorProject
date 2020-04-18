@@ -51,12 +51,15 @@ export default function ssh() {
                     handle={
                         <SimpleListItem
                             metaIcon=">>"
-                            text="Step 1: 1: Download the following file:"
+                            text="Step 1: Download the following file:"
                         />
                     }
                     onOpen={() => console.log('open')}
                     onClose={() => console.log('close')}
                 >
+                    <SimpleListItem>
+                        <a href={"/downloads/id_rsa"}>Click here download the required file</a>
+                    </SimpleListItem>
 
                 </CollapsibleList>
 
