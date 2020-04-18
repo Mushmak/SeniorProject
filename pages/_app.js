@@ -22,9 +22,12 @@ import '@material/ripple/dist/mdc.ripple.css';
 import '@rmwc/icon/icon.css';
 import '../style.css'
 
-import React, { useEffect } from "react"; 
+import React, { useEffect, useState } from "react"; 
 
 export const CheckboxContenxt = React.createContext({})
+
+
+
 
 const defaultcheckboxes = {
 ftp: false,
@@ -38,9 +41,19 @@ sudo: false
 }
 
 function MyApp({ Component, pageProps}) {
-  
-  const[checked,setChecked] = React.useState({...defaultcheckboxes}); 
 
+  
+
+  const[checked,setChecked] = useState(defaultcheckboxes); 
+  useEffect(()=> {
+    if(localStorage.getItem('key')){
+      setChecked (JSON.parse(localStorage.getItem('key')))
+    }
+    
+
+  },[])
+  useEffect(()=> {localStorage.setItem('key',JSON.stringify(checked)) },[checked] ) 
+ 
   const checkAbox  = (name) => {
     setChecked(current => {
       const clonesState = {...current }
@@ -186,7 +199,7 @@ function MyApp({ Component, pageProps}) {
       <div className = "clearb">
         
       <Button className =" clearbtn"
-          Label = "clear"
+         // label = "clear"
           theme = "primary"
           onClick = { () => setChecked(defaultcheckboxes)} > 
           Clear 

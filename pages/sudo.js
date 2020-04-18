@@ -63,8 +63,8 @@ export default function sudo() {
                 }
             >         
                  <SimpleListItem text = "Run the command 'cat /usr/local/sbin/update_motd.sh' "  /> 
-                 <SimpleListItem text = "We should be able to see the file. It looks like this is a bash script that reads user input then outputs it to the /etc/motd file. 
-                 All these values are actually bash commands! If you run them in your terminal you could get similar results to this script. That's all a bash script does." /> 
+                 <SimpleListItem text = {`We should be able to see the file. It looks like this is a bash script that reads user input then outputs it to the /etc/motd file. 
+                 All these values are actually bash commands! If you run them in your terminal you could get similar results to this script. That's all a bash script does.`} /> 
             </CollapsibleList> 
 
             <CollapsibleList
@@ -76,8 +76,8 @@ export default function sudo() {
                 }
             >         
                  <SimpleListItem text = "Run the command 'cat /usr/local/sbin/update_motd.sh' "  /> 
-                 <SimpleListItem text = "We should be able to see the file. It looks like this is a bash script that reads user input then outputs it to the /etc/motd file. 
-                 All these values are actually bash commands! If you run them in your terminal you could get similar results to this script. That's all a bash script does." /> 
+                 <SimpleListItem text = {`We should be able to see the file. It looks like this is a bash script that reads user input then outputs it to the /etc/motd file. 
+                 All these values are actually bash commands! If you run them in your terminal you could get similar results to this script. That's all a bash script does.`} /> 
                  <SimpleListItem text = "Notice the line taht says: 'if eval ''echo $motd > / etc/motd''; then' this is dangerous command.    " />
             </CollapsibleList>     
 
