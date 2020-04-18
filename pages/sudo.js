@@ -13,7 +13,7 @@ export default function sudo() {
   function  checkCode(code){
 
     if(code == "abc"){
-        setcheckbox('sudo')
+        setcheckbox('ff2500b003b03e466ea0c668982963e1')
     }
     else 
     {

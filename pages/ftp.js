@@ -13,7 +13,7 @@ export default function ftp() {
   const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
-    if(code == "abc"){
+    if(code == "91be5a2819328d0c3884d3788b7b961c"){
         setcheckbox('ftp'); 
     }
     else 

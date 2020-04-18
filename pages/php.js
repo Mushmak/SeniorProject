@@ -13,7 +13,7 @@ export default function php() {
     const setcheckbox= useContext(CheckboxContenxt);  
 function  checkCode(code){
 
-    if(code == "abc"){
+    if(code == "2929e7c6f2255ff4706433fcf09beabe"){
         setcheckbox('sudo')
     }
     else 

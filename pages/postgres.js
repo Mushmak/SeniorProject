@@ -13,7 +13,7 @@ export default function postgres() {
   const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
-    if(code == "abc"){
+    if(code == "d36628156ac4f31e193c93790e844bf3"){
         setcheckbox('postgress')
     }
     else 
