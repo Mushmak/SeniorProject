@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps}) {
             <a> home </a> 
           </Link> 
       </Button> 
-      
+    <div className ="easyP">
       <Button 
       //  Label = "ftp"
         theme="primary"> 
@@ -115,6 +115,9 @@ function MyApp({ Component, pageProps}) {
          <a> postgres </a> 
         </Link>  
       </Button> 
+    </div>
+    <div className = "harderP">
+
 
       <Button 
      //   Label ="php"
@@ -139,7 +142,7 @@ function MyApp({ Component, pageProps}) {
          <a> SUDO </a> 
         </Link>  
       </Button>
-
+      </div>
       <Button 
      //   Label = "help"
         theme="primary"> 
@@ -147,7 +150,7 @@ function MyApp({ Component, pageProps}) {
          <a> Basic Commands </a> 
         </Link>  
       </Button> 
-
+     
    
       <div className="flags">
         <Checkbox
