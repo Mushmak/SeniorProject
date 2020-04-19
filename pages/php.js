@@ -14,7 +14,7 @@ export default function php() {
 function  checkCode(code){
 
     if(code == "2929e7c6f2255ff4706433fcf09beabe"){
-        setcheckbox('sudo')
+        setcheckbox('php')
     }
     else 
     {

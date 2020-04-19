@@ -15,7 +15,7 @@ export default function http() {
   const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
-    if(code == "7f341c22d4ef8be38536b79964eaf78a "){
+    if(code == "7f341c22d4ef8be38536b79964eaf78a"){
         setcheckbox('http')
     }
     else 

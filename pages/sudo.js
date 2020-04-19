@@ -12,8 +12,8 @@ export default function sudo() {
    const setcheckbox= useContext(CheckboxContenxt);  
   function  checkCode(code){
 
-    if(code == "abc"){
-        setcheckbox('ff2500b003b03e466ea0c668982963e1')
+    if(code == "ff2500b003b03e466ea0c668982963e1"){
+        setcheckbox('sudo')
     }
     else 
     {
