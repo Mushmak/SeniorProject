@@ -49,7 +49,7 @@ function  checkCode(code){
                   // metaIcon ='/images/chevron_right.png'
                    text={ 
                        <> 
-                   Step 1: Go to the website < a style ={{marginLeft:'4px'}} href = "https://gallery.com" target="_blank"> gallery.com </a>  
+                   Step 1: Go to the website < a style ={{marginLeft:'4px'}} href = "http://gallery.com" target="_blank"> gallery.com </a>  
                        </>
                    }/>      
             }
